@@ -36,10 +36,10 @@ function AuthLayout({ children }: { children: ReactNode }) {
         p={6}
         w="100%"
         maxW="520px"
-        bg="gray.500"
         borderRadius="2xl"
         justifyContent="center"
         boxShadow="0px 3px 10px 0px rgba(0, 0, 0, 0.4)"
+        bg="linear-gradient(45deg, #4C4274, #36345C, #1D2339 30%, #1C2238 60%, #262d47 75%, #293660, #3b488b)"
       >
         {children}
       </Box>
