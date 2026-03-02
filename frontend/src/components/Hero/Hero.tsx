@@ -6,10 +6,9 @@ import {
   Heading,
   Text,
   Image,
-  Link,
 } from "@chakra-ui/react";
 
-import { Link as RouterLink } from 'react-router'
+import { Link as RouterLink } from "react-router";
 
 import notebook from "../../assets/notebook.png";
 
@@ -30,6 +29,8 @@ function Hero() {
           </Box>
           <ButtonGroup size="xl">
             <Button
+              as={RouterLink}
+              to="/register"
               background="#3F2A23"
               color="#FFF"
               rounded="full"
@@ -38,14 +39,17 @@ function Hero() {
                 background: "#241713",
               }}
             >
-              <Link as={RouterLink} to="/register" color="white" textDecoration="none">
-              Comece agora
-              </Link>
+                Comece agora
             </Button>
-            <Button colorScheme="teal" rounded="full" px={7} _hover={{background: "#f5f5f5"}}>
-              <Link as={RouterLink} to="/login" color="black" textDecoration="none">
+            <Button
+              as={RouterLink}
+              to="/login"
+              colorScheme="teal"
+              rounded="full"
+              px={7}
+              _hover={{ background: "#f5f5f5" }}
+            >
               Faça Login
-              </Link>
             </Button>
           </ButtonGroup>
         </Box>

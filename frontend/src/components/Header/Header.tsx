@@ -18,24 +18,24 @@ function Header() {
         <Box>
           <ButtonGroup size="xl" gap={4}>
             <Button
+              as={RouterLink}
+              to="/login"
               colorScheme="teal"
               rounded="full"
               px={7}
               _hover={{ background: "#f5f5f5" }}
             >
-              <Link as={RouterLink} to="/login" color="black" textDecoration="none">
               Login
-              </Link>
             </Button>
             <Button
               colorScheme="teal"
+              as={RouterLink}
+              to="/register"
               rounded="full"
               px={7}
               _hover={{ background: "#f5f5f5" }}
             >
-              <Link as={RouterLink} to="/register" color="black" textDecoration="none">
               Register
-              </Link>
             </Button>
           </ButtonGroup>
         </Box>
