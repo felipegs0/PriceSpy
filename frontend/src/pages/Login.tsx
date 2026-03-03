@@ -34,7 +34,7 @@ function Login() {
     try {
       setError(null)
 
-      await axios.post("http://localhost:3000/auth/login", {
+      const response = await axios.post("http://localhost:3000/auth/login", {
           user,
           password
       });
@@ -46,6 +46,8 @@ function Login() {
         description: "Conta logada com sucesso!",
         duration: 3000,
       });
+
+      localStorage.setItem("token", response.data.token);
     }
     catch(err: any) {
       setError(err.response?.data?.message || "Erro inesperado.");
