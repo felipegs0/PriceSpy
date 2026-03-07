@@ -19,4 +19,15 @@ model User {
   email String @unique
   password String
   createdAt DateTime @default(now())
+  products Product[]
+}
+
+model Product {
+  id Int @id @default(autoincrement())
+  name String
+  url String 
+  actualPrice Int
+  targetPrice Int
+  user User @relation(fields: [userId], references: [id])
+  userId Int
 }
